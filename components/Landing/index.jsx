@@ -49,7 +49,12 @@ export default function Home() {
       animate="enter"
       className={styles.landing}
     >
-      <Image src="/assets/home.png" fill alt="background" />
+      <Image
+        src="/assets/home.png"
+        fill
+        alt="background"
+        className=" object-cover"
+      />
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>UI/UX Designer -</p>
