@@ -49,12 +49,14 @@ export default function Home() {
       animate="enter"
       className={styles.landing}
     >
-      <Image
-        src="/assets/home.png"
-        fill
-        alt="background"
-        className=" object-cover"
-      />
+      <div className={styles.gradientOverlay}>
+        <Image
+          src="/assets/home.png"
+          fill
+          alt="background"
+          className="object-cover absolute"
+        />
+      </div>
       <div className={styles.sliderContainer}>
         <div ref={slider} className={styles.slider}>
           <p ref={firstText}>UI/UX Designer -</p>
@@ -74,7 +76,7 @@ export default function Home() {
             fill="white"
           />
         </svg>
-        <p>Ananya Singh</p>
+        <p className="text-6xl font-bold">Ananya Singh</p>
         <p>UI/UX Designer</p>
       </div>
     </motion.main>

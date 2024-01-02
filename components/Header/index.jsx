@@ -9,6 +9,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Rounded from '../../common/RoundedButton';
 import Magnetic from '../../common/Magnetic';
+import Link from 'next/link';
 
 export default function index() {
   const header = useRef(null);
@@ -18,6 +19,7 @@ export default function index() {
 
   useEffect(() => {
     if (isActive) setIsActive(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   useLayoutEffect(() => {
@@ -55,22 +57,22 @@ export default function index() {
         </div>
         <div className={styles.nav}>
           <Magnetic>
-            <div className={styles.el}>
-              <a>Home</a>
+            <Link href="/" className={styles.el}>
+              <div>Home</div>
               <div className={styles.indicator}></div>
-            </div>
+            </Link>
           </Magnetic>
           <Magnetic>
-            <div className={styles.el}>
-              <a>Portfolio</a>
+            <Link href="/portfolio" className={styles.el}>
+              <div>Portfolio</div>
               <div className={styles.indicator}></div>
-            </div>
+            </Link>
           </Magnetic>
           <Magnetic>
-            <div className={styles.el}>
-              <a>About</a>
+            <Link href="/about" className={styles.el}>
+              <div>About</div>
               <div className={styles.indicator}></div>
-            </div>
+            </Link>
           </Magnetic>
           <Magnetic>
             <div className={styles.el}>
