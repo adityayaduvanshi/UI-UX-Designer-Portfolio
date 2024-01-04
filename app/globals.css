@@ -17,6 +17,9 @@
 }
 
 body {
+  height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
