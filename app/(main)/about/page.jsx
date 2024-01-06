@@ -27,7 +27,7 @@ const page = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-white flex flex-row gap-20 mt-8 mx-10 justify-center items-center w-[100vw] px-10"
+          className="bg-white flex flex-row gap-20 mt-20  mx-20 justify-center items-center w-[100vw] px-10"
         >
           <div className="flex relative">
             <div className=" absolute top-0 right-60 [font-family:'Montserrat-Bold',Helvetica] font-bold text-[#c85a74] text-[115px] tracking-[0] leading-[138.0px]">
@@ -35,14 +35,17 @@ const page = () => {
               <br />
               Me
             </div>
-            <img
+            <motion.img
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
               className="w-[446px] h-[595px] object-cover"
               alt="Photo"
               src="/assets/about-me.png"
             />
           </div>
           <div className="">
-            <p className=" w-[706px] [font-family:'Public_Sans-Medium',Helvetica] font-medium text-[#212b36] text-[24px] tracking-[0] leading-[35.0px]">
+            <p className=" w-[706px] [font-family:'Public_Sans-Medium',Helvetica] font-medium text-[#212b36]  text-lg tracking-[0] leading-2">
               Hey there! <br />I m a passionate UI/UX designer with a knack for
               creating intuitive and delightful digital experiences. I
               kick-started my journey during my final year of engineering at

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ColoredGround = ({
   backgroundImage,

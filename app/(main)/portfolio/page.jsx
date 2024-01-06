@@ -13,18 +13,21 @@ const page = () => {
         </h2>
       </div>
       <ColoredGround
+        link="metrics"
         imageSource="/assets/portfolio-1.png"
         imageAlt="Metrics"
         title="Startup Metrics
         Visualization"
       />
       <PlainGround
+        link="hrms"
         imageSource="/assets/portfolio-2.png"
         imageAlt="HRMS"
         title="Comprehensive HRMS
         Solution"
       />
       <ColoredGround
+        link="ecommerce"
         imageSource="/assets/portfolio-3.png"
         imageAlt="Future Of Construction 
         eCommerce"
@@ -32,6 +35,7 @@ const page = () => {
         eCommerce"
       />
       <PlainGround
+        link="hrms"
         imageSource="/assets/portfolio-4.png"
         imageAlt="Comprehensive HRMS
         Solution"
