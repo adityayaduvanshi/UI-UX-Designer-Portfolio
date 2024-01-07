@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Texting from '@/components/Portfolio/Texting';
@@ -9,13 +10,28 @@ import {
   Customer3,
   Customer4,
 } from '@/components/CustomerSvgs';
+import { motion } from 'framer-motion';
 import ImageSetup2 from '@/components/Portfolio/ImageSetup2';
 // import PortfolioHeading from '../../../../components/Heading/PortfolioHeading';
 const Hpage = () => {
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   (async () => {
+  //     const LocomotiveScroll = (await import('locomotive-scroll')).default;
+  //     const locomotiveScroll = new LocomotiveScroll();
+
+  //     setTimeout(() => {
+  //       setIsLoading(false);
+  //       document.body.style.cursor = 'default';
+  //       window.scrollTo(0, 0);
+  //     }, 2000);
+  //   })();
+  // }, []);
   return (
-    <>
-      <div className="mx-20   mt-20 mb-10 ">
-        <div className="flex ml-20  gap-20 items-center">
+    <div>
+      <div className="mx-20      block   mt-20 mb-10 ">
+        <div className="flex  gap-20 items-center">
           <div className=" flex   gap-8 flex-col w-[28rem]">
             <h2 className=" [font-family:'Montserrat-Bold',Helvetica]  text-[#212B36]   text-[60px] font-bold underline underline-offset-[20px] ">
               e Build Bazaar
@@ -24,14 +40,19 @@ const Hpage = () => {
               Revolutionizing Construction Commerce
             </p>
           </div>
-          <div className=" relative w-[900px] h-[440px]">
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, type: 'spring' }}
+            className=" relative w-[900px] h-[440px]"
+          >
             <Image
               src="/assets/ebazar-1.png"
               alt="ebazar"
               fill
               objectFit=" contain"
             />
-          </div>
+          </motion.div>
         </div>
 
         <div className=" text-center mt-40 mx-40 flex justify-center">
@@ -79,23 +100,38 @@ const Hpage = () => {
           <div>
             <Texting title="Customer Insights" />
             <div className="my-20 grid grid-cols-2 gap-4">
-              <div className=" flex flex-col  gap-4 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -400 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.9, type: 'spring' }}
+                className=" flex flex-col  gap-4 items-center"
+              >
                 <Customer1 />
                 <p className="text-[#637381]    text-left [font-family:'Public Sans',Helvetica] ">
                   Some find navigating through the extensive product range a bit
                   overwhelming. Simplifying categories or offering a quick
                   search feature could make their journey smoother.
                 </p>
-              </div>
-              <div className=" flex flex-col  gap-4 items-center">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 400 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.9, type: 'spring' }}
+                className=" flex flex-col  gap-4 items-center"
+              >
                 <Customer2 />
                 <p className="text-[#637381]     text-left [font-family:'Public Sans',Helvetica] ">
                   Customers expressed a common desire for more immediate and
                   accurate order tracking. Customers expressed a common desire
                   for more immediate and accurate order tracking.
                 </p>
-              </div>
-              <div className=" flex flex-col  gap-4 items-center">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -400 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 2, type: 'spring' }}
+                className=" flex flex-col  gap-4 items-center"
+              >
                 <Customer3 />
                 <p className="text-[#637381]   text-left [font-family:'Public Sans',Helvetica] ">
                   Long-time users pointed out that having richer and more
@@ -103,8 +139,13 @@ const Hpage = () => {
                   informed decisions. They appreciate knowing the nitty-gritty
                   details before hitting 'Add to Cart.
                 </p>
-              </div>
-              <div className=" flex flex-col  gap-4 items-center">
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 400 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 2, type: 'spring' }}
+                className=" flex flex-col  gap-4 items-center"
+              >
                 <Customer4 />
                 <p className="text-[#637381]     text-left [font-family:'Public Sans',Helvetica] ">
                   Long-time eBB enthusiasts expressed a desire for a more
@@ -112,7 +153,7 @@ const Hpage = () => {
                   product recommendations based on their purchase history,
                   creating a more tailored shopping experience.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -207,7 +248,7 @@ const Hpage = () => {
         </div>
       </div>
       <PortfolioFooter next="" />
-    </>
+    </div>
   );
 };
 
