@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-const PlainGround = ({
+const PlainGround2 = ({
   imageSource,
   imageAlt,
   subtitle,
@@ -10,8 +10,16 @@ const PlainGround = ({
   tags,
 }) => {
   return (
-    <div className="bg-white py-10 px-40 drop-shadow-md  shadow-md shadow-gray-200">
+    <div className="bg-white py-10 px-40 ">
       <div className="flex justify-between">
+        <div className="relative w-[700px] h-[400px] ">
+          <Image
+            src={imageSource}
+            alt={imageAlt}
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <div className="flex flex-col justify-center max-w-[380px]">
           <div>
             <h2 className="text-[3rem] cursor-pointer  text-[#212B36] font-medium">
@@ -35,17 +43,9 @@ const PlainGround = ({
             </h4>
           </Link>
         </div>
-        <div className="relative w-[700px] h-[400px] ">
-          <Image
-            src={imageSource}
-            alt={imageAlt}
-            layout="fill"
-            objectFit="contain"
-          />
-        </div>
       </div>
     </div>
   );
 };
 
-export default PlainGround;
+export default PlainGround2;

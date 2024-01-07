@@ -3,44 +3,43 @@ import React from 'react';
 import Image from 'next/image';
 import ColoredGround from '../../../components/Portfolio/ColoredGround';
 import PlainGround from '@/components/Portfolio/PlainGroud';
+import PlainGround2 from '@/components/Portfolio/PlainGround2';
 
 const page = () => {
   return (
-    <div className="w-[100vw] overflow-x-hidden">
-      <div className="flex   justify-center my-20 mr-40 overflow-x-hidden">
-        <h2 className="   font-bold text-[4rem] text-custom-pink overflow-x-hidden ">
+    <div className="w-[100vw] pb-10 overflow-x-hidden">
+      <div className="flex  px-40   my-20  overflow-x-hidden">
+        {/* <h3 className="  [font-family:'Montserrat',Helvetica] font-thin text-[4rem] text-custom-blue overflow-x-hidden ">
           Design for the user <br /> everything else will follow
-        </h2>
+        </h3> */}
+        <h3 className=" font-normal leading-[96px] text-[4rem] text-custom-blue ">
+          Design for the user <br /> everything else will follow...
+        </h3>
       </div>
-      <ColoredGround
-        link="metrics"
-        imageSource="/assets/portfolio-1.png"
-        imageAlt="Metrics"
-        title="Startup Metrics
-        Visualization"
-      />
+
       <PlainGround
-        link="hrms"
+        subtitle="Revolutionizing Construction Commerce"
+        link="ebazar"
         imageSource="/assets/portfolio-2.png"
-        imageAlt="HRMS"
-        title="Comprehensive HRMS
-        Solution"
+        imageAlt="eBuildBazaar"
+        title="eBuildBazaar"
+        tags={['Website', 'Revamp']}
       />
-      <ColoredGround
-        link="ecommerce"
+      <PlainGround2
+        subtitle="Simplifying HR Management with Innovative Solutions"
+        link="hrms"
         imageSource="/assets/portfolio-3.png"
-        imageAlt="Future Of Construction 
-        eCommerce"
-        title="Future Of Construction 
-        eCommerce"
+        imageAlt="Texla Culture"
+        title="Texla Culture"
+        tags={['UX Research', 'Mobile Design']}
       />
       <PlainGround
-        link="hrms"
-        imageSource="/assets/portfolio-4.png"
-        imageAlt="Comprehensive HRMS
-        Solution"
-        title="Comprehensive HRMS
-        Solution"
+        link=""
+        imageSource="/assets/panthion.png"
+        imageAlt="Panthion"
+        subtitle="Startup Metrics Visualization"
+        tags={['Dashboard', 'Product Design']}
+        title="Panthion"
       />
     </div>
   );
