@@ -18,14 +18,19 @@ const Hpage = () => {
         <div className="flex ml-40  gap-20 items-center">
           <div className=" flex   gap-8 flex-col w-[28rem]">
             <h2 className=" [font-family:'Montserrat-Bold',Helvetica]  text-[#212B36]   text-[60px] font-bold underline underline-offset-[20px] ">
-              e Build Bazaar{' '}
+              e Build Bazaar
             </h2>
             <p className="text-[#c85a74] font-normal text-[24px] ">
               Revolutionizing Construction Commerce
             </p>
           </div>
-          <div className="">
-            <img src="/assets/ebazar-1.png" className=" w-[903px] h-[445px]" />
+          <div className=" relative w-[900px] h-[440px]">
+            <Image
+              src="/assets/ebazar-1.png"
+              alt="ebazar"
+              fill
+              objectFit=" contain"
+            />
           </div>
         </div>
 
