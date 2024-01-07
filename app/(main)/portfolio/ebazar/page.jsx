@@ -15,7 +15,7 @@ const Hpage = () => {
   return (
     <>
       <div className="mx-20   mt-20 mb-10 ">
-        <div className="flex ml-40  gap-20 items-center">
+        <div className="flex ml-20  gap-20 items-center">
           <div className=" flex   gap-8 flex-col w-[28rem]">
             <h2 className=" [font-family:'Montserrat-Bold',Helvetica]  text-[#212B36]   text-[60px] font-bold underline underline-offset-[20px] ">
               e Build Bazaar
@@ -206,7 +206,7 @@ const Hpage = () => {
           </div>
         </div>
       </div>
-      <PortfolioFooter />
+      <PortfolioFooter next="" />
     </>
   );
 };

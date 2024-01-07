@@ -3,8 +3,10 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+
+import { motion, AnimatePresence } from 'framer-motion';
 import Gallery from '@/components/Gallery';
+import Preloader from '@/components/Preloader';
 const page = () => {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -22,6 +24,9 @@ const page = () => {
   }, []);
   return (
     <>
+      <AnimatePresence mode="wait">
+        {isLoading && <Preloader />}
+      </AnimatePresence>
       <div className="mt-4 block  w-[100vw]   ">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

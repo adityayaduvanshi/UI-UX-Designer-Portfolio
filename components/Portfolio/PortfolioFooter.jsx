@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const PortfolioFooter = () => {
+  const router = useRouter();
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div className="bg-[#FFF2F3] py-10">
@@ -41,6 +43,7 @@ const PortfolioFooter = () => {
         </button>
 
         <button
+          onClick={() => router.push('/portfolio')}
           className="mt-6 relative"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -51,7 +54,7 @@ const PortfolioFooter = () => {
             height="140"
             viewBox="0 0 140 140"
             // fill="none"
-            fill={isHovered ? '#C85A74' : 'none'} // Conditional fill based on hover state
+            fill={isHovered ? '#C85A74' : 'none'}
           >
             <circle cx="70" cy="70" r="68.5" stroke="#C85A74" strokeWidth="3" />
           </svg>
