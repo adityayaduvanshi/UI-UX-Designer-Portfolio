@@ -30,8 +30,8 @@ const page = () => {
       <div className="mt-4 block  w-[100vw]   ">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, type: 'spring' }}
           className="bg-white flex flex-row gap-20 mt-20  mx-20 justify-center items-center w-[100vw] px-10"
         >
           <div className="flex relative">
